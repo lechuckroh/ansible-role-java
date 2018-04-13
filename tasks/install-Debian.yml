@@ -1,0 +1,10 @@
+---
+- name: Install JDK
+  apt:
+    name: "openjdk-{{ java_version }}-jdk"
+    state: "{{ 'present' if java_devel == 1 else 'absent' }}"
+
+- name: Install JRE
+  apt:
+    name: "openjdk-{{ java_version }}-jre"
+

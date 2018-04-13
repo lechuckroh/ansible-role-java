@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Lechuck Roh
+  description: Install Java
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - xenial
+
+  galaxy_tags:
+    - development
+    - java
+    - jdk
+    - openjdk
+
+dependencies: []
