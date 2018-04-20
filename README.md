@@ -3,6 +3,7 @@
 An ansible role for installing Java.
 
 Tested under:
+* Amazon Linux 2017.03
 * CentOS 7.4
 * Ubuntu 16.04
 
