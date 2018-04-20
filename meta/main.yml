@@ -4,6 +4,9 @@ galaxy_info:
   license: MIT
   min_ansible_version: 1.9
   platforms:
+  - name: Amazon
+    versions:
+    - 2016.09
   - name: EL
     versions:
     - 7

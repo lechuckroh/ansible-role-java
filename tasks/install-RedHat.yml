@@ -1,9 +1,18 @@
 ---
 - name: Install JDK
   yum:
-    name: " java-1.{{ java_version }}.0-openjdk-devel"
+    name: "java-1.{{ java_version }}.0-openjdk-devel"
     state: "{{ 'present' if java_devel == 1 else 'absent' }}"
 
 - name: Install JRE
   yum:
-    name: " java-1.{{ java_version }}.0-openjdk"
+    name: "java-1.{{ java_version }}.0-openjdk"
+
+- name: Fetch JRE version
+  shell: java -version 2>&1 | grep version | awk -F. '{print $2}'
+  register: current_java_version
+  changed_when: false
+
+- name: Set default JRE
+  shell: "alternatives --set java /usr/lib/jvm/jre-1.{{ java_version }}.0-openjdk.x86_64/bin/java"
+  when: current_java_version.stdout|int != java_version
