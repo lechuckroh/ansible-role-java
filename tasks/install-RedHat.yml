@@ -1,11 +1,11 @@
 ---
 - name: Install JDK
-  yum:
+  package:
     name: "java-1.{{ java_version }}.0-openjdk-devel"
     state: "{{ 'present' if java_devel == 1 else 'absent' }}"
 
 - name: Install JRE
-  yum:
+  package:
     name: "java-1.{{ java_version }}.0-openjdk"
 
 - name: Fetch JRE version

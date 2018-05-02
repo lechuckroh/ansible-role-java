@@ -7,9 +7,9 @@ galaxy_info:
   - name: Amazon
     versions:
     - 2016.09
-  - name: EL
+  - name: Fedora
     versions:
-    - 7
+    - 25
   - name: Ubuntu
     versions:
     - xenial
