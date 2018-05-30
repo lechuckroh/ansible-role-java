@@ -2,7 +2,7 @@
 - name: Install JDK
   package:
     name: "java-1.{{ java_version }}.0-openjdk-devel"
-    state: "{{ 'present' if java_devel == 1 else 'absent' }}"
+    state: "{{ 'present' if java_devel == true else 'absent' }}"
 
 - name: Install JRE
   package:

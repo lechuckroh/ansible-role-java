@@ -14,10 +14,10 @@ No requirements
 
 ## Role Variables
 
-| Variable       | Default | Comments                       |
-|:---------------|:--------|:-------------------------------|
-| `java_version` | 8       | Java version                   |
-| `java_devel`   | 0       | 0: Install JRE, 1: Install JDK |
+| Variable       | Default | Comments                              |
+|:---------------|:--------|:--------------------------------------|
+| `java_version` | 8       | Java version                          |
+| `java_devel`   | false   | false: Install JRE, true: Install JDK |
 
 ## Dependencies
 
